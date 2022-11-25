@@ -1,0 +1,33 @@
+
+
+<div class="container">
+        <h1 class="heading">Hybrid</h1>
+<div class="sipContainer">
+
+        <form [formGroup]="hybridForm" (ngSubmit)="add()">
+                <label for="amount">LumpsumAmount: </label><br>
+                <input type="text" placeholder="Enter Your LumpsumAmount" formControlName="lumpsumAmount" [(ngModel)]="lumpsumAmount"><br>
+                <span class="inval" *ngIf="lumsmAmounts && lumsmAmounts.invalid && lumsmAmounts.touched">inavalid</span><br>
+                <label for="amount">SIP-Amount: </label><br>
+                <input type="text" placeholder="Enter Your SIPAmount" formControlName="sipAmount" [(ngModel)]="sipAmount"><br>
+                <span class="inval" *ngIf="sipAmounts && sipAmounts.invalid && sipAmounts.touched">inavalid</span><br>
+                <label for="month">Month: </label><br>
+                <input type="text" placeholder="Enter months" formControlName="hybridMonth" [(ngModel)]="month"><br>
+                <span class="inval" *ngIf="months && months.invalid && months.touched">inavalid</span><br>
+                <label for="percent">Percent: </label><br>
+                <input type="text" placeholder="Percentage" formControlName="hybridPercent" [(ngModel)]="percent"><br>
+                <span class="inval" *ngIf="percents && percents.invalid && percents.touched">inavalid</span><br>
+              <button [disabled]="hybridForm.invalid">Result</button>
+        </form>
+      
+</div>
+
+<div class="display">
+        <h1>TotalAmount: {{totalAmount}}</h1>
+        <h1>Interest: {{interest}}</h1>
+        <h1>InvestedAmount: {{paidAmount}}</h1>
+       
+</div>
+
+
+</div>

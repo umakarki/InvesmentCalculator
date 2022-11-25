@@ -1,0 +1,41 @@
+{
+  "signupUsers": [
+    {
+      "firstName": "vaasu",
+      "lastName": "vijayakumar",
+      "mobileNumber": "7879789793",
+      "emailId": "vasu@gmail.com",
+      "city": "Polur",
+      "password": "vaasu@123",
+      "id": 2
+    },
+    {
+      "firstName": "Hema",
+      "lastName": "kalaiarasan",
+      "mobileNumber": "7878988776",
+      "emailId": "hema@ymail.com",
+      "city": "vellur",
+      "password": "hema21234",
+      "id": 3
+    },
+    {
+      "firstName": "uma",
+      "lastName": "umakrishna",
+      "mobileNumber": "7878787878",
+      "emailId": "uma@ymail.com",
+      "city": "Thirvannamalai",
+      "password": "123456",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

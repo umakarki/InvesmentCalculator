@@ -1,0 +1,68 @@
+<body>
+    <h1 style="margin-left: 45%; padding-top: 50px;">User details update</h1>
+    
+     <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="text-center">
+                <h1>Update Form</h1>
+              
+              </div>
+              <form [formGroup]="updateForm" (ngSubmit)="upDate()">
+                <div class="mb-3">
+                  <label for="exampleInputFullname" class="form-label">First Name</label>
+                  <input formControlName="firstName" type="text" class="form-control" id="exampleInputFullname"
+                    placeholder="Firs tName"><br>
+                  <span class="text-danger"
+                    *ngIf="updateForm.controls['firstName'].hasError('pattern') && updateForm.controls['firstName'].touched">*Please enter valid phone number with minimum 3charector</span>
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputFullname" class="form-label">Last Name</label>
+                    <input formControlName="lastName" type="text" class="form-control" id="exampleInputFullname"
+                      placeholder="Last Name"><br>
+                    <span class="text-danger"
+                      *ngIf="updateForm.controls['lastName'].hasError('pattern') && updateForm.controls['lastName'].touched">*Please enter valid phone number with minimum 3charector</span>
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputMobile" class="form-label">Mobile Number</label>
+                  <input formControlName="mobileNumber" type="text" class="form-control" id="exampleInputMobile"
+                    placeholder="Mobile No">
+      
+                  <span class="text-danger" *ngIf="updateForm.controls['mobileNumber'].hasError('pattern') && (updateForm.controls['mobileNumber'].dirty || updateForm.controls['mobileNumber'].touched) ">Please
+                    enter valid mobile number</span>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input formControlName="emailId" type="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Email">
+                  <span class="text-danger"
+                    *ngIf="updateForm.controls['emailId'].hasError('pattern') && (updateForm.controls['emailId'].dirty || updateForm.controls['emailId'].touched)">Please
+                    enter valid email address</span>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputFullname" class="form-label">City</label>
+                    <input formControlName="city" type="text" class="form-control" id="exampleInputFullname"
+                      placeholder="City"><br>
+                    <span class="text-danger"
+                      *ngIf="updateForm.controls['city'].hasError('pattern') && updateForm.controls['city'].touched">*Name
+                      should be minimum 3charector</span>
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
+                    placeholder="password">
+                  <span class="text-danger"
+                    *ngIf="updateForm.controls['password'].hasError('pattern') && (updateForm.controls['password'].dirty || updateForm.controls['password'].touched)">password
+                    should be minimum 6</span>
+                </div>
+                <button [disabled]="!updateForm.valid" type="submit" class="btn btn-primary">Update</button>
+              </form>
+             
+            </div>
+          </div>
+        </div>
+      </div> 
+      </body>

@@ -1,0 +1,24 @@
+<div class="container">
+<h1 class="heading">Lumpsum</h1>
+<div class="sipContainer">
+
+        <form [formGroup]="lumpsumForm" (ngSubmit)="add()">
+                <label for="amount">Amount: </label><br>
+                <input type="text" placeholder="Enter Your Amount" formControlName="lumpsumAmount" [(ngModel)]="amount"><br>
+                <span class="inval" *ngIf="amounts && amounts.invalid && amounts.touched">inavalid</span><br>
+                <label for="year">Year: </label><br>
+                <input type="text" placeholder="Enter years" formControlName="lumpsumYear" [(ngModel)]="year"><br>
+                <span class="inval" *ngIf="years && years.invalid && years.touched">inavalid</span><br>
+                <label for="percent">Percent: </label><br>
+                <input type="text" placeholder="Percentage" formControlName="lumpsumPercent" [(ngModel)]="percent"><br>
+                <span class="inval" *ngIf="percents && percents.invalid && percents.touched">inavalid</span><br>
+                <button [disabled]="lumpsumForm.invalid">Result</button>
+        </form>
+</div>
+<div class="display">
+        <h1>TotalAmount: {{totalAmount}}</h1>
+        <h1>Interest: {{interest}}</h1>
+        <h1>InvestedAmount: {{paidAmount}}</h1>
+</div>
+
+</div>

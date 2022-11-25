@@ -1,0 +1,37 @@
+
+
+<div class="container">  
+    
+    <h1 style="margin-left: 40%; margin-bottom: 50px;"> User Details </h1>  
+      
+    <table class="table table-striped">  
+      <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>FirstName</th>  
+            <th>LastName</th>  
+            <th>MobileNumber</th> 
+            <th>Email</th>  
+            <th>City</th>  
+            <th>Password</th>  
+            <th>Action</th>
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let user of userList">  
+          <td>{{ user.id }}</td>  
+          <td>{{ user.firstName }}</td>  
+          <td>{{ user.lastName }}</td>  
+          <td>{{ user.mobileNumber }}</td>  
+          <td>{{ user.emailId }}</td>  
+          <td>{{ user.city }}</td> 
+          <td>{{ user.password }}</td> 
+          <td><button routerLink="/updateuser/{{user.id}}" mat-button style="margin-right: 10px; color: blue;">Edit</button ><button mat-button style="color:red" (click)="deleteuser(user)">Delete</button></td> 
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
+
+
+  
+   

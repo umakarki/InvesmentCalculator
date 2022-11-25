@@ -1,0 +1,61 @@
+
+
+.sipContainer{
+    border:none;
+    width:500px;
+    padding:40px;
+    /* position:absolute; */
+    margin-top: 30px;
+    margin-left: 20%;
+    /* top:50%;
+    left:50%;
+    transform:translate(-50%,-50%); */
+    background: rgb(117, 173, 212);
+    float: left;
+    background:#9AD4F7;
+    /* overflow:visible; */
+    
+}
+
+.sipContainer input{
+    margin-bottom: 2px;
+    border-radius: 5px;
+    height:35px;
+    width:100%;
+}
+.sipContainer label{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 40%;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+}
+.display{
+    /* position:absolute; */
+    float: right;
+    margin-top: 40px;
+    margin-right: 20%;
+   
+   
+   
+}
+
+.inval{
+color:red; 
+margin-bottom: 30px;
+}
+.heading{
+    margin-left: 25%;
+    font-weight: bold;
+    position: absolute;
+    
+}
+
+.sipContainer, .display{
+    display: inline;
+}
