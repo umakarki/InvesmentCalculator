@@ -35,10 +35,15 @@ export class SignInComponent implements OnInit {
     this.http.get<any>("http://localhost:3000/signupUsers")
     .subscribe(res=>{
       const user=res.find((a:any)=>{
-        return a.email===this.signinForm.value.email && a.password===this.signinForm.value.password;
+        console.log(a)
+        console.log(a.emailId);
+        console.log(a.password);
+        console.log(this.signinForm.value.emailId);
+        console.log(this.signinForm.value.password);
+        return a.emailId===this.signinForm.value.emailId && a.password===this.signinForm.value.password;
       });
       const user1=res.find((a:any)=>{
-        return a.email===this.signinForm.value.email && a.password!=this.signinForm.value.password;
+        return a.emailId===this.signinForm.value.emailId && a.password!=this.signinForm.value.password;
       });
 
       if(user){

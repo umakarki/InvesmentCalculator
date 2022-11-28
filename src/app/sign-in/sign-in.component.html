@@ -34,7 +34,7 @@
   
         <mat-form-field class="name" floatLabel="never">
           <input type="password" matInput placeholder="*****************" formControlName="password" [type]="hide?'password':'text'">
-          <button style="font-size: 20px;" mat-icon-button matSuffix (click)="hide = !hide">
+          <button style="font-size: 20px;" mat-icon-button matSuffix onclick="event.preventDefault();" (click)="hide = !hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
   

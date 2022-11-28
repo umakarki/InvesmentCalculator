@@ -17,7 +17,7 @@ export class SignUpComponent implements OnInit {
   firstName:new FormControl('',[Validators.required,Validators.minLength(3), Validators.maxLength(20),Validators.pattern("^[a-zA-Z.]+$")]),
   lastName:new FormControl('',[Validators.required,Validators.minLength(3), Validators.maxLength(20),Validators.pattern("^[a-zA-Z.]+$")]),
   mobileNumber:new FormControl('',[Validators.required,Validators.pattern(/^((9|8|7|0)[0-9]{9})$/)]),
-  emailId:new FormControl('',[Validators.required,Validators.pattern("^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-z]{2,4}$")]),
+  emailId:new FormControl('',[Validators.required,Validators.pattern("^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\\.[a-z]{2,4}$")]),
   city:new FormControl('',[Validators.required,Validators.minLength(3), Validators.maxLength(20),Validators.pattern("^[a-zA-Z.]+$")]),
   password:new FormControl('',[Validators.required,Validators.minLength(6), Validators.maxLength(20),Validators.pattern("^[a-zA-Z.@_0-9]+$")]),
 })
@@ -57,6 +57,9 @@ get lastName(){
       const action="close";
       this.snackBar.open(sucessMeg,action, {
         duration:100000,
+        verticalPosition: 'top', // Allowed values are  'top' | 'bottom'
+          horizontalPosition: 'center', // Allowed values are 'start' | 'center' | 'end' | 'left' | 'right'
+
       });
 
       this.signupForm.reset();
