@@ -91,7 +91,8 @@
                     <mat-form-field class="name" floatLabel="never">
                         <input type="password" matInput placeholder="****************" formControlName="password"
                             [type]="hide?'password':'text'">
-                        <button style="font-size: 20px;" mat-icon-button matSuffix (click)="hide = !hide" onclick="event.preventDefault();">
+                        <button style="font-size: 20px;" mat-icon-button matSuffix (click)="hide = !hide"
+                            onclick="event.preventDefault();">
                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         </button>
 
@@ -103,10 +104,10 @@
                 </div>
             </mat-grid-tile>
         </mat-grid-list>
-        
+
         <button class="btn" type="submit" [disabled]="signupForm.invalid" (click)="signUp()">Submit</button>
         <p class="alMem" routerLink="/signin">Already a member? <span style="color:black;">Sign In</span></p>
-       
+
     </form>
 
 </div>

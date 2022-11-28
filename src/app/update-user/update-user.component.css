@@ -1,29 +1,29 @@
-.card{
-    border:none;
-    width:500px;
-    padding:40px;
-    position:absolute;
-    top:45%;
-    left:50%;
-    transform:translate(-50%,-50%);
+.card {
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: rgb(117, 173, 212);
     background: linear-gradient(90deg, rgb(44, 127, 182)0%rgb(74, 42, 134)100%)
-
 }
 
-.card h1,h6{
-    
-    color:rgb(1, 0, 3);
-}
-label{
-color:rgb(1, 0, 3);
+.card h1,
+h6 {
+
+    color: rgb(1, 0, 3);
 }
 
-input.ng-touched.ng-invalid{
+label {
+    color: rgb(1, 0, 3);
+}
+
+input.ng-touched.ng-invalid {
     border: 2px solid red;
 }
 
-body{
-    background-color:peachpuff;
+body {
+    background-color: peachpuff;
 }
-
